@@ -17,7 +17,9 @@ function Grid({cells}) {
         else if(turn === false) {
             board[index] = 'X';
         }
+        
         turnsound.play();
+
         const win = isWinner(board, (turn)?'O':'X');
         if(win) {
             setWinner(win);
