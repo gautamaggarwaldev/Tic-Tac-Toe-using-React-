@@ -1,7 +1,7 @@
 import Icon from "../Icon/Icon";
 import './Card.css'
 
-function Card({player}) {
+function Card({gameEnd, player, onPlay, index}) {
     let icon = <Icon />;
     if(player === 'O') {
         icon = <Icon  name="circle"/>;
@@ -13,7 +13,7 @@ function Card({player}) {
         icon = <Icon name="pen" />;
     }
     return (
-        <div className="card">
+        <div className="card" onClick={()=> !gameEnd && player===''  && onPlay(index)}>
             {icon}
         </div>
     )

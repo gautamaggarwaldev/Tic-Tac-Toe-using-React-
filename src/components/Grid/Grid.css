@@ -9,3 +9,8 @@
     gap: 8px;
     border-radius: 10px;
 }
+
+.turn-highlight {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
